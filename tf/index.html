@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" onclick="showHome(); return false;">&lt;CS<span>Quiz</span>/&gt;</a>
+    <div class="save-status" id="saveStatus">Progress saved</div>
+  </header>
+
+  <main class="container">
+    <section id="homeScreen">
+      <div class="hero">
+        <p class="eyebrow">LEARN • PRACTICE • LEVEL UP</p>
+        <h1>Master Computer Science<span>.</span></h1>
+        <p class="hero-text">
+          Challenge yourself with 120 levels of computer science questions.
+          Answer correctly, earn points, and unlock new levels.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong id="totalScore">0</strong><span>Total points</span></div>
+          <div class="stat"><strong id="completedLevels">0/120</strong><span>Levels completed</span></div>
+          <div class="stat"><strong id="accuracy">0%</strong><span>Accuracy</span></div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Choose your level</h2>
+          <p>Complete a level to unlock the next one.</p>
+        </div>
+        <button class="secondary-btn" id="resetButton">Reset progress</button>
+      </div>
+
+      <div id="levelsGrid" class="levels-grid"></div>
+    </section>
+
+    <section id="quizScreen" class="quiz-screen hidden">
+      <div class="quiz-top">
+        <button class="back-btn" id="backButton">← Levels</button>
+        <span id="levelLabel">Level 1 / 120</span>
+        <span id="questionCounter">Question 1 / 15</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <article class="question-card">
+        <div class="question-meta">
+          <span id="categoryLabel" class="category-label">Basics</span>
+          <span class="points-label">+10 points for a correct answer</span>
+        </div>
+
+        <h2 id="questionText">Question appears here</h2>
+        <div id="optionsList" class="options-list"></div>
+
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+
+        <div class="quiz-footer">
+          <span id="roundScore">Level score: 0</span>
+          <span id="answerHint">Choose one answer to continue</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="resultScreen" class="result-screen hidden">
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon">🏆</div>
+        <p class="eyebrow">LEVEL RESULTS</p>
+        <h1 id="resultTitle">Level completed!</h1>
+        <p id="resultMessage">Great work.</p>
+
+        <div class="result-stats">
+          <div><strong id="resultCorrect">0/15</strong><span>Correct answers</span></div>
+          <div><strong id="resultPoints">0</strong><span>Points earned</span></div>
+          <div><strong id="resultPercent">0%</strong><span>Score</span></div>
+        </div>
+
+        <div class="result-actions">
+          <button id="continueButton" class="primary-btn">Continue</button>
+          <button id="homeButton" class="secondary-btn">All levels</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Keep learning. Keep building. Keep leveling up.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
